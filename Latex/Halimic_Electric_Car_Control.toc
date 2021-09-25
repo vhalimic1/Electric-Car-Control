@@ -1,0 +1,8 @@
+\babel@toc {croatian}{}\relax 
+\thispagestyle {empty}
+\contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motor}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Pretvarač}{1}{section.1.2}%
+\contentsline {chapter}{Prilozi}{3}{section*.3}%
+\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{4}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Kelly KLS-H Brushless Motor Controller User's Manual}{8}{appendix.1.B}%
