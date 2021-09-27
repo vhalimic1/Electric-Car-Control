@@ -1,8 +1,9 @@
-\babel@toc {croatian}{}\relax 
+\babel@toc {croatian}{}
 \thispagestyle {empty}
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motor}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Pretvarač}{1}{section.1.2}%
-\contentsline {chapter}{Prilozi}{3}{section*.3}%
-\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{4}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Kelly KLS-H Brushless Motor Controller User's Manual}{8}{appendix.1.B}%
+\contentsline {subsection}{\numberline {1.2.1}Pinovi energetskog pretvarača}{1}{subsection.1.2.1}%
+\contentsline {chapter}{Prilozi}{5}{section*.4}%
+\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{6}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Kelly KLS-H Brushless Motor Controller User's Manual}{10}{appendix.1.B}%
