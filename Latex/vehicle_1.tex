@@ -56,7 +56,7 @@
 	\end{itemize}
 \end{itemize}
 
-\begin{figure}[]
+\begin{figure}
 \begin{center}
 \includegraphics[scale=1]{slike/kellypins.jpg}
 \end{center}
@@ -64,9 +64,28 @@
 \label{fig:kellypins}
 \end{figure}
 
+\section{Upravljanje motorom}
 
+\qquad Energetski pretvarač/kontroler koristi vektorsku modulaciju (\textit{engl. space-vector modulation}) za upravljanje trofaznim motorom. Za upravljanje cjelokupnim sistemom vozila, potrebno je uključiti dodatni sloj upravljanja, koji će upravljati paralelno sa sva četiri motora.
 
+\section{Papučica gasa}
 
+\qquad Brzinu motora je moguće zadavati pomoću papučice gasa. Model koji je odabran ima serijski broj \textit{JKH-005-A-65}. Prema specifikaciji proizvođača \textit{SAYOO}, datoj u prilogu \ref{gas}, dužina kabla spojenog na kočnicu iznosi $65cm$. U kablu se nalazi 5 žica raspoređenih na dva konektora - jedan sa tri, drugi sa četiri žice. Raspon ulaznog i izlaznog napona papučice gasa iznosi od $0$ do $5V$. Ovaj element se konceptualno ponaša kao otpornik sa klizačem koji je spojen na napon napajanja. Izlazni napon otpornika ovisi o položaju klizača, odnosno u ovom slučaju - položaja papučice gasa. Pinovi, prikazani na slici (\ref{fig:gas}), imaju funkcije date u nastavku.
+
+\begin{itemize}
+	\item (1) - plus napon napajanja ($5V$)
+	\item (2) - minus napon napajanja ($0V$, masa)
+	\item (3) - izlazni napon
+	\item (4) - izlaz prekidača
+	\item (5) - ulaz prekidača
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=1]{slike/foot_throttle.png}
+\caption{Pinovi papučice gasa}
+\label{fig:gas}
+\end{figure}
 
 
 

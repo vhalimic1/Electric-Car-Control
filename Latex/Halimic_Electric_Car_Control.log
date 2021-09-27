@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.13)  27 SEP 2021 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.13)  27 SEP 2021 19:59
 entering extended mode
 **./Halimic_Electric_Car_Control.tex
 (Halimic_Electric_Car_Control.tex
@@ -819,7 +819,7 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count322
 \l__pdf_internal_box=\box58
 ) (Halimic_Electric_Car_Control.aux (vehicle_1.aux)
-(prilog_motor.aux) (prilog_kelly.aux))
+(prilog_motor.aux) (prilog_kelly.aux) (prilog_gas.aux))
 \openout1 = `Halimic_Electric_Car_Control.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
@@ -919,7 +919,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count330
-<etf-logo.png, id=32, 519.9425pt x 411.5375pt>
+<etf-logo.png, id=44, 519.9425pt x 411.5375pt>
 File: etf-logo.png Graphic file (type png)
 <use etf-logo.png>
 Package pdftex.def Info: etf-logo.png  used on input line 138.
@@ -990,7 +990,7 @@ l.203 \cleardoublepage
 
  (vehicle_1.tex
 Poglavlje 1.
-<slike/electric_car.jpg, id=63, 676.5275pt x 903.375pt>
+<slike/electric_car.jpg, id=78, 676.5275pt x 903.375pt>
 File: slike/electric_car.jpg Graphic file (type jpg)
 <use slike/electric_car.jpg>
 Package pdftex.def Info: slike/electric_car.jpg  used on input line 7.
@@ -1029,16 +1029,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2 <./slike/electric_car.jpg>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 59.
-
-<slike/kellypins.jpg, id=78, 297.36093pt x 380.17032pt>
+<slike/kellypins.jpg, id=93, 297.36093pt x 380.17032pt>
 File: slike/kellypins.jpg Graphic file (type jpg)
 <use slike/kellypins.jpg>
 Package pdftex.def Info: slike/kellypins.jpg  used on input line 61.
 (pdftex.def)             Requested size: 297.3602pt x 380.16939pt.
-)
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1057,6 +1053,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4 <./slike/kellypins.jpg>]
+<slike/foot_throttle.png, id=106, 199.49532pt x 179.16937pt>
+File: slike/foot_throttle.png Graphic file (type png)
+<use slike/foot_throttle.png>
+Package pdftex.def Info: slike/foot_throttle.png  used on input line 85.
+(pdftex.def)             Requested size: 199.49481pt x 179.16893pt.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1065,38 +1067,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5
-
-
-
-
-]
-\openout2 = `prilog_motor.aux'.
-
- (prilog_motor.tex
-Prilog A.
-<dokumenti/8000W Car Motor 72V.pdf, id=93, 597.23125pt x 845.1575pt>
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf  used on input line 
-3.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf  used on input line 
-3.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<dokumenti/8000W Car Motor 72V.pdf, id=96, page=1, 597.23125pt x 845.1575pt>
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf, page 1>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page1 used on inpu
-t line 3.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf, page 1>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page1 used on inpu
-t line 3.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+[5 <./slike/foot_throttle.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1108,6 +1079,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
 
+
+
+]
+\openout2 = `prilog_motor.aux'.
+
+ (prilog_motor.tex
+Prilog A.
+<dokumenti/8000W Car Motor 72V.pdf, id=116, 597.23125pt x 845.1575pt>
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf  used on input line 
+3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf  used on input line 
+3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+<dokumenti/8000W Car Motor 72V.pdf, id=119, page=1, 597.23125pt x 845.1575pt>
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf, page 1>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page1 used on inpu
+t line 3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf, page 1>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page1 used on inpu
+t line 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7
+
+
 ]
 File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
 <use dokumenti/8000W Car Motor 72V.pdf, page 1>
@@ -1124,25 +1135,25 @@ File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
 Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page1 used on inpu
 t line 3.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [7 <./dokumenti/8000W Car Motor 72V.pdf>]
-<dokumenti/8000W Car Motor 72V.pdf, id=124, page=2, 597.23125pt x 845.1575pt>
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf, page 2>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page2 used on inpu
-t line 3.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf, page 2>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page2 used on inpu
-t line 3.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
-<use dokumenti/8000W Car Motor 72V.pdf, page 2>
-Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page2 used on inpu
-t line 3.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [8 <./dokumenti/8000W Car Motor 72V.pdf>]
-<dokumenti/8000W Car Motor 72V.pdf, id=131, page=3, 614.295pt x 794.97pt>
+<dokumenti/8000W Car Motor 72V.pdf, id=147, page=2, 597.23125pt x 845.1575pt>
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf, page 2>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page2 used on inpu
+t line 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf, page 2>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page2 used on inpu
+t line 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
+<use dokumenti/8000W Car Motor 72V.pdf, page 2>
+Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page2 used on inpu
+t line 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [9 <./dokumenti/8000W Car Motor 72V.pdf>]
+<dokumenti/8000W Car Motor 72V.pdf, id=154, page=3, 614.295pt x 794.97pt>
 File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
 <use dokumenti/8000W Car Motor 72V.pdf, page 3>
 Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page3 used on inpu
@@ -1158,7 +1169,7 @@ File: dokumenti/8000W Car Motor 72V.pdf Graphic file (type pdf)
 Package pdftex.def Info: dokumenti/8000W Car Motor 72V.pdf , page3 used on inpu
 t line 3.
 (pdftex.def)             Requested size: 614.3216pt x 795.00444pt.
- [9 <./dokumenti/8000W Car Motor 72V.pdf>])
+ [10 <./dokumenti/8000W Car Motor 72V.pdf>])
 \openout2 = `prilog_kelly.aux'.
 
  (prilog_kelly.tex
@@ -1167,7 +1178,7 @@ Prilog B.
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=158, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=181, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf  used on input line 3.
@@ -1252,7 +1263,7 @@ PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=169, page=1, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=192, page=1, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf, page 1>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf , page1 used on input line 3.
@@ -1269,7 +1280,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10
+[11
 
 
 
@@ -1287,11 +1298,11 @@ File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf, page 1>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf , page1 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
- [11 <./dokumenti/KellyKLS.pdf>]
+ [12 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=195, page=4, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=218, page=4, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf, page 4>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf , page4 used on input line 3.
@@ -1303,114 +1314,114 @@ Package pdftex.def Info: dokumenti/KellyKLS.pdf , page4 used on input line 3.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf, page 4>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf , page4 used on input line 3.
-(pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
-[12 <./dokumenti/KellyKLS.pdf>]
-
-pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
-PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=205, page=5, 597.53236pt x 845.05714pt>
-File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 5>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page5 used on input line 3.
-(pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
-File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 5>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page5 used on input line 3.
-(pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
-File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 5>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 [13 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=220, page=6, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=228, page=5, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 6>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page6 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 5>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 6>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page6 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 5>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 6>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page6 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 5>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 [14 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=225, page=7, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=243, page=6, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 7>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page7 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 6>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page6 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 7>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page7 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 6>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page6 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 7>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page7 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 6>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page6 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 [15 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=230, page=10, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=248, page=7, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 10>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page10 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 7>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page7 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 10>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page10 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 7>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page7 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 10>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page10 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 7>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page7 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 [16 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=237, page=12, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=253, page=10, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 12>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page12 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 10>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page10 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 12>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page12 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 10>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page10 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 12>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page12 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 10>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page10 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 [17 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=244, page=13, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=261, page=12, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 13>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page13 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 12>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page12 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 13>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page13 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 12>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page12 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
-<use dokumenti/KellyKLS.pdf, page 13>
-Package pdftex.def Info: dokumenti/KellyKLS.pdf , page13 used on input line 3.
+<use dokumenti/KellyKLS.pdf, page 12>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page12 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
 [18 <./dokumenti/KellyKLS.pdf>]
 
 pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<dokumenti/KellyKLS.pdf, id=249, page=14, 597.53236pt x 845.05714pt>
+<dokumenti/KellyKLS.pdf, id=267, page=13, 597.53236pt x 845.05714pt>
+File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
+<use dokumenti/KellyKLS.pdf, page 13>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page13 used on input line 3.
+(pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
+File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
+<use dokumenti/KellyKLS.pdf, page 13>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page13 used on input line 3.
+(pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
+File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
+<use dokumenti/KellyKLS.pdf, page 13>
+Package pdftex.def Info: dokumenti/KellyKLS.pdf , page13 used on input line 3.
+(pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
+[19 <./dokumenti/KellyKLS.pdf>]
+
+pdfTeX warning: pdflatex (file ./dokumenti/KellyKLS.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<dokumenti/KellyKLS.pdf, id=272, page=14, 597.53236pt x 845.05714pt>
 File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf, page 14>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf , page14 used on input line 3.
@@ -1423,25 +1434,122 @@ File: dokumenti/KellyKLS.pdf Graphic file (type pdf)
 <use dokumenti/KellyKLS.pdf, page 14>
 Package pdftex.def Info: dokumenti/KellyKLS.pdf , page14 used on input line 3.
 (pdftex.def)             Requested size: 597.55824pt x 845.09375pt.
-[19 <./dokumenti/KellyKLS.pdf>])
+[20 <./dokumenti/KellyKLS.pdf>])
+\openout2 = `prilog_gas.aux'.
+
+ (prilog_gas.tex
+Prilog C.
+<dokumenti/foot_throttle.pdf, id=279, 597.23125pt x 845.1575pt>
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf  used on input line 3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf  used on input line 3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf  used on input line 3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf  used on input line 3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+<dokumenti/foot_throttle.pdf, id=284, page=1, 597.23125pt x 845.1575pt>
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 1>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page1 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 1>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page1 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21
+
+
+
+
+]
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 1>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page1 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 1>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page1 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 1>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page1 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [22 <./dokumenti/foot_throttle.pdf>]
+<dokumenti/foot_throttle.pdf, id=334, page=2, 597.23125pt x 845.1575pt>
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 2>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page2 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 2>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page2 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 2>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page2 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [23 <./dokumenti/foot_throttle.pdf>]
+<dokumenti/foot_throttle.pdf, id=342, page=3, 597.23125pt x 845.1575pt>
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 3>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page3 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 3>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page3 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: dokumenti/foot_throttle.pdf Graphic file (type pdf)
+<use dokumenti/foot_throttle.pdf, page 3>
+Package pdftex.def Info: dokumenti/foot_throttle.pdf , page3 used on input line
+ 3.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+
+[24 <./dokumenti/foot_throttle.pdf>])
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     259.
+(LaTeX3)     260.
 
  (Halimic_Electric_Car_Control.aux
-(vehicle_1.aux) (prilog_motor.aux) (prilog_kelly.aux))
+(vehicle_1.aux) (prilog_motor.aux) (prilog_kelly.aux) (prilog_gas.aux))
 Package rerunfilecheck Info: File `Halimic_Electric_Car_Control.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: D90CDBF42A08D79B18D1C0BAB30063CD;1113.
+(rerunfilecheck)             Checksum: 617152866388EF66EBF861939977EF6E;1528.
  ) 
 Here is how much of TeX's memory you used:
- 17368 strings out of 479173
- 269131 string characters out of 2851305
- 635255 words of memory out of 3000000
- 34503 multiletter control sequences out of 15000+600000
+ 17417 strings out of 479173
+ 270513 string characters out of 2851305
+ 638910 words of memory out of 3000000
+ 34535 multiletter control sequences out of 15000+600000
  472351 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,17n,110p,936b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 110i,17n,110p,936b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/VedadNedzad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.e
 nc}<C:/Users/VedadNedzad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmmi10.pfb><C:/Users/VedadNedzad/AppData/Local/Programs/MiKTeX/fonts/typ
@@ -1450,9 +1558,9 @@ iKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/VedadNedzad/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/VedadNedzad/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/VedadNedzad/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Halimic_Electric_Car_Control.pdf (21 pages, 1031292 bytes).
+Output written on Halimic_Electric_Car_Control.pdf (26 pages, 1297002 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 
