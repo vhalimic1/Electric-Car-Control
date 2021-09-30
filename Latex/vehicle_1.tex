@@ -26,30 +26,30 @@
 	\item Konektor \textit{DJ7091Y-2.3-11}
 	\begin{itemize}
 		\item (14) REV-SW - prekidač za kretanje nazad
-		\item (6) GND - minus napona napajanja, povratni signal
+		\item  (6) GND - minus napona napajanja, povratni signal
 		\item (12) FWD - prekidač za kretanje naprijed
 		\item (11) 12V - naponski izvor od $12V$
 		\item (25) 12V Brake - ručna kočnica
 		\item (22) ECO - prekidač za štedljivi način rada
 		\item (33) CAN-H - \textit{high} pin za CAN komunikaciju
-		\item (7) PWR - plus napona napajanja pretvarača
+		\item  (7) PWR - plus napona napajanja pretvarača
 		\item (34) CAN-L - \textit{low} pin za CAN komunikaciju
 	\end{itemize}
 	\item Konektor \textit{DJ7091Y-2.3-21}
 		\begin{itemize}
 		\item (15) FOOT-SW - prekidač za gas
-		\item (3) Throttle - analogni ulaz za gas ($0-5V$)
+		\item  (3) Throttle - analogni ulaz za gas ($0-5V$)
 		\item (20) GND - minus napon napajanja, povratni signal
-		\item (8) Meter - kopija signala sa Hallovog senzora
-		\item (4) 5V - naponski izvor od $5V$
-		\item (2) Brake-AN - \textit{boost} funkcija ili analogni ulaz za regenerativni tip kočenja
+		\item  (8) Meter - kopija signala sa Hallovog senzora
+		\item  (4) 5V - naponski izvor od $5V$
+		\item  (2) Brake-AN - \textit{boost} funkcija ili analogni ulaz za regenerativni tip kočenja
 		\item (11) 12V - naponski izvor od $12V$
 	\end{itemize}
 	\item Konektor \textit{DJ7061Y-2.3-21}
 		\begin{itemize}
 		\item (21) GND - minus napon napajanja, povratni signal
-		\item (1) Temp - temperatura motora
-		\item (5) 5V - naponski izvor od $5V$
+		\item  (1) Temp - temperatura motora
+		\item  (5) 5V - naponski izvor od $5V$
 		\item (18) Hall A - signal Hallovog senzora za fazu A
 		\item (17) Hall B - signal Hallovog senzora za fazu B 
 		\item (16) Hall C - signal Hallovog senzora za fazu C 
@@ -66,7 +66,43 @@
 
 \section{Upravljanje motorom}
 
-\qquad Energetski pretvarač/kontroler koristi vektorsku modulaciju (\textit{engl. space-vector modulation}) za upravljanje trofaznim motorom. Za upravljanje cjelokupnim sistemom vozila, potrebno je uključiti dodatni sloj upravljanja, koji će upravljati paralelno sa sva četiri motora.
+\qquad Energetski pretvarač/kontroler koristi vektorsku modulaciju (\textit{engl. space-vector modulation}) za upravljanje trofaznim motorom. Za upravljanje cjelokupnim sistemom vozila, potrebno je uključiti dodatni sloj upravljanja, koji će upravljati paralelno sa svim pretvaračima koji su povezani sa motorima.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{Configuration} & \multicolumn{3}{c|}{Pin Status} & \multirow{2}{*}{Running Status} \\ \cline{1-5}
+Forward Switch & Foot Switch & FWD-SW (12) & REV-SW (14) & FOOT (15) &  \\ \hline
+\multirow{4}{*}{Enable} & \multirow{4}{*}{Disable} & OFF & OFF & X & Neutral \\ \cline{3-6} 
+ &  & OFF & ON & X & Reverse \\ \cline{3-6} 
+ &  & ON & OFF & X & Forward \\ \cline{3-6} 
+ &  & ON & ON & X & Neutral \\ \hline
+\multirow{4}{*}{Disable} & \multirow{4}{*}{Enable} & X & OFF & OFF & Can't operate \\ \cline{3-6} 
+ &  & X & ON & OFF & Can't operate \\ \cline{3-6} 
+ &  & X & ON & ON & Reverse \\ \cline{3-6} 
+ &  & X & OFF & ON & Forward \\ \hline
+\multirow{2}{*}{Disable} & \multirow{2}{*}{Disable} & X & OFF & X & Forward \\ \cline{3-6} 
+ &  & X & ON & X & Reverse \\ \hline
+\end{tabular}
+\caption{Konfiguracija pretvarača}
+\label{tab:konfiguracija}
+\end{table}
+
+\begin{comment}
+Standardni način spajanja energetskog pretvarača, motora i dodatnih elemenata je dat na slici (\ref{fig:wiring}). Način upravljanja će biti F-N-R (\textit{engl. forward-neutral-reverse}) odnosno \textit{naprijed-neutralno-nazad}. Jedan od tri režima rada će biti omogućen dovođenjem odgovarajuće kombinacije na pinove (
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/wiring.jpg}
+\caption{Shema spajanja pretvarača}
+\label{fig:wiring}
+\end{figure}
+\end{comment}
+
 
 \section{Papučica gasa}
 
@@ -76,8 +112,8 @@
 	\item (1) - plus napon napajanja ($5V$)
 	\item (2) - minus napon napajanja ($0V$, masa)
 	\item (3) - izlazni napon
-	\item (4) - izlaz prekidača
-	\item (5) - ulaz prekidača
+	\item (4) - izlazni kontakt prekidača
+	\item (5) - ulazni kontakt prekidača
 \end{itemize}
 
 \begin{figure}
