@@ -26,30 +26,30 @@
 	\item Konektor \textit{DJ7091Y-2.3-11}
 	\begin{itemize}
 		\item (14) REV-SW - prekidač za kretanje nazad
-		\item  (6) GND - minus napona napajanja, povratni signal
+		\item \hphantom{0}(6) GND - minus napona napajanja, povratni signal, masa
 		\item (12) FWD - prekidač za kretanje naprijed
 		\item (11) 12V - naponski izvor od $12V$
 		\item (25) 12V Brake - ručna kočnica
 		\item (22) ECO - prekidač za štedljivi način rada
 		\item (33) CAN-H - \textit{high} pin za CAN komunikaciju
-		\item  (7) PWR - plus napona napajanja pretvarača
+		\item \hphantom{0}(7) PWR - plus napona napajanja pretvarača
 		\item (34) CAN-L - \textit{low} pin za CAN komunikaciju
 	\end{itemize}
 	\item Konektor \textit{DJ7091Y-2.3-21}
 		\begin{itemize}
 		\item (15) FOOT-SW - prekidač za gas
-		\item  (3) Throttle - analogni ulaz za gas ($0-5V$)
-		\item (20) GND - minus napon napajanja, povratni signal
-		\item  (8) Meter - kopija signala sa Hallovog senzora
-		\item  (4) 5V - naponski izvor od $5V$
-		\item  (2) Brake-AN - \textit{boost} funkcija ili analogni ulaz za regenerativni tip kočenja
+		\item \hphantom{0}(3) Throttle - analogni ulaz za gas ($0-5V$)
+		\item (20) GND - minus napon napajanja, povratni signal, masa
+		\item \hphantom{0}(8) Meter - kopija signala sa Hallovog senzora
+		\item \hphantom{0}(4) 5V - naponski izvor od $5V$
+		\item \hphantom{0}(2) Brake-AN - \textit{boost} funkcija ili analogni ulaz za regenerativni tip kočenja
 		\item (11) 12V - naponski izvor od $12V$
 	\end{itemize}
 	\item Konektor \textit{DJ7061Y-2.3-21}
 		\begin{itemize}
-		\item (21) GND - minus napon napajanja, povratni signal
-		\item  (1) Temp - temperatura motora
-		\item  (5) 5V - naponski izvor od $5V$
+		\item (21) GND - minus napon napajanja, povratni signal, masa
+		\item \hphantom{0}(1) Temp - temperatura motora
+		\item \hphantom{0}(5) 5V - naponski izvor od $5V$
 		\item (18) Hall A - signal Hallovog senzora za fazu A
 		\item (17) Hall B - signal Hallovog senzora za fazu B 
 		\item (16) Hall C - signal Hallovog senzora za fazu C 
@@ -68,6 +68,11 @@
 
 \qquad Energetski pretvarač/kontroler koristi vektorsku modulaciju (\textit{engl. space-vector modulation}) za upravljanje trofaznim motorom. Za upravljanje cjelokupnim sistemom vozila, potrebno je uključiti dodatni sloj upravljanja, koji će upravljati paralelno sa svim pretvaračima koji su povezani sa motorima.
 
+Za sada će konceptualno biti razmotreno upravljanje jednim motorom. Shema upravljanja je data na sljedećoj strani. Osnovna ideja upravljanja se zasniva na tome da se na pin (3) \textit{KLS7275H} pretvarača dovodi signal u rasponu od $0$ do $5V$, koji će proporcionalno svojoj vrijednosti - određivati željenu brzinu vrtnje motora. Izvor signala gasa može biti potenciometar ili nožna papučica, što se također mora uzeti u obzir prilikom konfiguracije samog pretvarača. U prikazanoj konfiguraciji je potrebno obezbjediti signal koji će na pinu (15) davati informaciju o stanju papučice gasa. Funkcija analognog regenerativnog kočenja se može realizirati na sličan način, pri čemu za razliku od gasa, nije potrebna infromacija da li je papučica aktivirana. Na pinu (25) je moguće realizirati $12V$ ručnu kočnicu.
+
+Korisnik može mijenjati smjer vrtnje motora, odnosno smjer kretanja vozila (naprijed ili nazad) dovođenjem odgovarajuće kombinacije signala na pinove (12) i (14). Na osnovu ulaznih signala, energetski pretvarač pokreće trofazni DC motor bez četkica. Pinovi (16), (17) i (18) služe za prikupljanje signala sa Hallovog senzora na samom motoru. Napajanje Hallovog senzora iznosi $5V$.
+
+\includepdf[pages=-]{dokumenti/proteus upravljanje}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -92,18 +97,6 @@ Forward Switch & Foot Switch & FWD-SW (12) & REV-SW (14) & FOOT (15) &  \\ \hlin
 \label{tab:konfiguracija}
 \end{table}
 
-\begin{comment}
-Standardni način spajanja energetskog pretvarača, motora i dodatnih elemenata je dat na slici (\ref{fig:wiring}). Način upravljanja će biti F-N-R (\textit{engl. forward-neutral-reverse}) odnosno \textit{naprijed-neutralno-nazad}. Jedan od tri režima rada će biti omogućen dovođenjem odgovarajuće kombinacije na pinove (
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{slike/wiring.jpg}
-\caption{Shema spajanja pretvarača}
-\label{fig:wiring}
-\end{figure}
-\end{comment}
-
-
 \section{Papučica gasa}
 
 \qquad Brzinu motora je moguće zadavati pomoću papučice gasa. Model koji je odabran ima serijski broj \textit{JKH-005-A-65}. Prema specifikaciji proizvođača \textit{SAYOO}, datoj u prilogu \ref{gas}, dužina kabla spojenog na kočnicu iznosi $65cm$. U kablu se nalazi 5 žica raspoređenih na dva konektora - jedan sa tri, drugi sa četiri žice. Raspon ulaznog i izlaznog napona papučice gasa iznosi od $0$ do $5V$. Ovaj element se konceptualno ponaša kao otpornik sa klizačem koji je spojen na napon napajanja. Izlazni napon otpornika ovisi o položaju klizača, odnosno u ovom slučaju - položaja papučice gasa. Pinovi, prikazani na slici (\ref{fig:gas}), imaju funkcije date u nastavku.
@@ -123,7 +116,18 @@ Standardni način spajanja energetskog pretvarača, motora i dodatnih elemenata 
 \label{fig:gas}
 \end{figure}
 
+\begin{comment}
 
+Standardni način spajanja energetskog pretvarača, motora i dodatnih elemenata je dat na slici (\ref{fig:wiring}). Način upravljanja će biti F-N-R (\textit{engl. forward-neutral-reverse}) odnosno \textit{naprijed-neutralno-nazad}. Jedan od tri režima rada će biti omogućen dovođenjem odgovarajuće kombinacije na pinove (
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/wiring.jpg}
+\caption{Shema spajanja pretvarača}
+\label{fig:wiring}
+\end{figure}
+
+\end{comment}
 
 
 

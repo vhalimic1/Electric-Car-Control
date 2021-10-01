@@ -5,8 +5,9 @@
 \contentsline {section}{\numberline {1.2}Pretvarač}{1}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Pinovi energetskog pretvarača}{1}{subsection.1.2.1}%
 \contentsline {section}{\numberline {1.3}Upravljanje motorom}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Papučica gasa}{5}{section.1.4}%
-\contentsline {chapter}{Prilozi}{6}{section*.6}%
-\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{7}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Kelly KLS-H Brushless Motor Controller User's Manual}{11}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}JKH Foot Throttle}{21}{appendix.1.C}%
+\contentsline {section}{\numberline {1.4}Papučica gasa}{7}{section.1.4}%
+\contentsline {chapter}{Prilozi}{8}{section*.6}%
+\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{9}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Kelly KLS-H Brushless Motor Controller User's Manual}{13}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}JKH Foot Throttle}{23}{appendix.1.C}%
+\contentsline {chapter}{\numberline {D}Control Box}{27}{appendix.1.D}%
