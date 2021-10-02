@@ -14,6 +14,25 @@
 
 \qquad Motor je trofazni sa $16$ pari polova, nominalne snage $8000W$. Za mjerenje brzine i pozicije motora, dostupna su dva seta Hallovih senzora. Moguće je mjeriti i temperaturu motora pomoću temperaturnog senzora $KTY83/122$. Motor sadrži dva konektora, čiji pinovi odgovaraju pinovima na \textit{DJ7061Y-2.3-21} konektoru energetskog pretvarača. Svaki od konektora daje informacije sa Hallovog i temperaturnog senzora.
 
+\section{Papučica gasa}
+
+\qquad Brzinu motora je moguće zadavati pomoću papučice gasa. Model koji je odabran ima serijski broj \textit{JKH-005-A-65}. Prema specifikaciji proizvođača \textit{SAYOO}, datoj u prilogu \ref{gas}, dužina kabla spojenog na kočnicu iznosi $65cm$. U kablu se nalazi 5 žica raspoređenih na dva konektora - jedan sa tri, drugi sa četiri žice. Raspon ulaznog i izlaznog napona papučice gasa iznosi od $0$ do $5V$. Ovaj element se konceptualno ponaša kao otpornik sa klizačem koji je spojen na napon napajanja. Izlazni napon otpornika ovisi o položaju klizača, odnosno u ovom slučaju - položaja papučice gasa. Pinovi, prikazani na slici (\ref{fig:gas}), imaju funkcije date u nastavku.
+
+\begin{itemize}
+	\item (1) - plus napon napajanja ($5V$)
+	\item (2) - minus napon napajanja ($0V$, masa)
+	\item (3) - izlazni napon
+	\item (4) - izlazni kontakt prekidača
+	\item (5) - ulazni kontakt prekidača
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=1]{slike/foot_throttle.png}
+\caption{Pinovi papučice gasa}
+\label{fig:gas}
+\end{figure}
+
 \section{Pretvarač}
 
 \qquad Energetski pretvarač \textit{KLS7275H} proizvođača \textit{Kelly} sadrži 5 digitalnih ulaza: prekidače za gas i kočnicu, prekidače za kretanje naprijed i nazad, te prekidač za \textit{boost} način rada. Dostupna su 3 analogna ulaza: gas, kočnica i temperatura motora. Opseg ulaznog napona može varirati od $0$ do $5V$. Za upravljanje je moguće koristiti i palicu (\textit{engl. joystick}), pri čemu pozicija palice određuje zadanu brzinu i smjer kretanja. \textit{Cruise} režim rada, koji je također dostupan, podrazumijeva zadržavanje zadane brzine vrtnje motora sve dok se ne zada nova brzina ili aktivira kočnica. Pretvarač podržava povezivanje putem \textit{CAN} mreže.
@@ -74,8 +93,9 @@ Korisnik može mijenjati smjer vrtnje motora, odnosno smjer kretanja vozila (nap
 
 \includepdf[pages=-]{dokumenti/proteus upravljanje}
 
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
+
+\begin{comment}
+
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -97,38 +117,45 @@ Forward Switch & Foot Switch & FWD-SW (12) & REV-SW (14) & FOOT (15) &  \\ \hlin
 \label{tab:konfiguracija}
 \end{table}
 
-\section{Papučica gasa}
-
-\qquad Brzinu motora je moguće zadavati pomoću papučice gasa. Model koji je odabran ima serijski broj \textit{JKH-005-A-65}. Prema specifikaciji proizvođača \textit{SAYOO}, datoj u prilogu \ref{gas}, dužina kabla spojenog na kočnicu iznosi $65cm$. U kablu se nalazi 5 žica raspoređenih na dva konektora - jedan sa tri, drugi sa četiri žice. Raspon ulaznog i izlaznog napona papučice gasa iznosi od $0$ do $5V$. Ovaj element se konceptualno ponaša kao otpornik sa klizačem koji je spojen na napon napajanja. Izlazni napon otpornika ovisi o položaju klizača, odnosno u ovom slučaju - položaja papučice gasa. Pinovi, prikazani na slici (\ref{fig:gas}), imaju funkcije date u nastavku.
-
-\begin{itemize}
-	\item (1) - plus napon napajanja ($5V$)
-	\item (2) - minus napon napajanja ($0V$, masa)
-	\item (3) - izlazni napon
-	\item (4) - izlazni kontakt prekidača
-	\item (5) - ulazni kontakt prekidača
-\end{itemize}
-
-\begin{figure}
-\centering
-\includegraphics[scale=1]{slike/foot_throttle.png}
-\caption{Pinovi papučice gasa}
-\label{fig:gas}
-\end{figure}
-
-\begin{comment}
-
-Standardni način spajanja energetskog pretvarača, motora i dodatnih elemenata je dat na slici (\ref{fig:wiring}). Način upravljanja će biti F-N-R (\textit{engl. forward-neutral-reverse}) odnosno \textit{naprijed-neutralno-nazad}. Jedan od tri režima rada će biti omogućen dovođenjem odgovarajuće kombinacije na pinove (
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{slike/wiring.jpg}
-\caption{Shema spajanja pretvarača}
-\label{fig:wiring}
-\end{figure}
-
 \end{comment}
 
+\section{Konfiguracija parametara pretvarača}
 
+\qquad Parametre \textit{KLS7275H} kontrolera je moguće podešavati pomoću PC ili Android uređaja. Veza sa PC uređajem se ostvaruje preko \textit{USB-RS232} konektora. Softver za konfiguraciju je dostupan na zvaničnoj \href{https://kellycontroller.com/shop/kls-h/}{stranici} proizvođača. Dijaloški okvir programa je prikazan na slici (\ref{fig:configuration}). Podešavanja vezana za motor i samo vozilo koje će motor pogoniti kao dio sistema su odvojena. Informacije kao što su ime modula, serijski broj, verzija softvera i napon pretvarača su dostupna samo za čitanje.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/configuration.jpg}
+\caption{Program za konfiguraciju energetskog pretvarača}
+\label{fig:configuration}
+\end{figure}
+
+\section{Operacija identifikacije ugla}
+
+\qquad Prije puštanja određenog motora u rad, potrebno izvršiti proceduru \textit{identifikacije ugla}. Ova operacija se izvršava korištenjem aplikacije na računaru koji je povezan sa energetskim pretvaračem preko \textit{USB-RS232} konektora. Shema spajanja je data na slici (\ref{fig:angleident}). Pretvarač je spojen na motor sa tri faze, a sa motora se prenosi signal sa Hallovog senzora. Vanjski element za zadavanje gasa također treba povezati sa pretvaračem, pri čemu taj element može jednostavno biti potenciometar ili papučica gasa.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/angleident.jpg}
+\caption{Shema spajanja za operaciju identifikacije ugla}
+\label{fig:angleident}
+\end{figure}
+
+Komponenta koja se može koristiti u tu svrhu je \textit{Controller Control Box}, prikazana na slici (\ref{fig:controlbox}). Shema spajanja sa kontrolerom preko 14-pinskog konektora je data u prilogu \ref{control}, pri čemu je za realizaciju identifikacije ugla dovoljno koristiti opciju u kojoj se \textit{PWR} prekidač na kontrolnoj kutiji koristi za \textit{Key switch} na slici (\ref{fig:angleident}) i konfiguracija \textit{Throttle} potenciometra kao element zadavanja gasa.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{slike/controlbox.jpg}
+\caption{Controller Control Box}
+\label{fig:controlbox}
+\end{figure}
+
+Pri povezivanju svih elemenata potrebno je da \textit{PWR} prekidač, odnosno\textit{Key switch} bude u otvorenom stanju. Nakon što se preuzme softver za konfiguraciju i instalira na PC, prekidač za napajanje je potrebno zatvoriti i pokrenuti instalirani softver. Kada se otvori dijaloški prozor programa (slika \ref{fig:configuration}), potrebno je kliknuti na opciju \textit{Read}.
+
+Naredni korak u postupku identifikacije ugla je upisivanje broja \textbf{170} u parametar \textit{Identification Angle} i odabir opcije \textit{Write}. Zatim je potrebno izaći iz programa za konfiguraciju. Isključivanjem dovoda napajanja na nekoliko sekundi i ponovnim spuštanjem \textit{PWR} prekidača, motor započinje kretanje nasumično u oba smjera. Proces identifikacije traje od 2 do 3 minute.
+
+Kada se proces završi, pretvarač će dati $3-2$ kod greške - zujalica (\textit{engl. buzzer}) će najprije dati 3, a zatim 2 brza zvučna signala. Zatim je potrebno opet na nekoliko sekundi isključiti napajanje kontrolera. Nakon ponovnog pokretanja korisničkog sučelja za konfiguraciju kontrolera, potrebno je provjeriti \textit{Identification Angle} parametar, ukoliko je proces identifikacije uspješno izvršen - parametar ima vrijednost 85.
+
+Iako se u procesu identifikacije ugla nije koristio potenciometar za davanje gasa, ovaj element služi za provjeru da li se motor kreće u željenom smjeru. Ukoliko to nije slučaj, potrebno je označiti (\textit{engl. check}) opciju \textit{Change Direction} u programu za konfiguraciju. Da bi se promjena sačuvala potrebno je kliknuti na dugme \textit{Write} i resetirati napajanje.
 
 
