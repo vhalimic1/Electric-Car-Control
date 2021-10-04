@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.24)  2 OCT 2021 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.24)  4 OCT 2021 08:26
 entering extended mode
 **./Halimic_Electric_Car_Control.tex
 (Halimic_Electric_Car_Control.tex
@@ -1502,7 +1502,7 @@ anged.
  ) 
 Here is how much of TeX's memory you used:
  17766 strings out of 478927
- 278260 string characters out of 2852061
+ 278436 string characters out of 2852061
  646167 words of memory out of 3000000
  35105 multiletter control sequences out of 15000+600000
  472351 words of font info for 122 fonts, out of 8000000 for 9000
@@ -1516,7 +1516,7 @@ w/times/utmb8a.pfb><C:/Users/Pojkan/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Users/Pojkan/AppData/Local/Programs/MiKTeX/fonts/type1/
 urw/times/utmr8a.pfb><C:/Users/Pojkan/AppData/Local/Programs/MiKTeX/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on Halimic_Electric_Car_Control.pdf (31 pages, 2191627 bytes).
+Output written on Halimic_Electric_Car_Control.pdf (31 pages, 2191631 bytes).
 PDF statistics:
  461 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
