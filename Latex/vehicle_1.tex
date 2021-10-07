@@ -150,7 +150,9 @@ Komponenta koja se može koristiti u tu svrhu je \textit{Controller Control Box}
 \label{fig:controlbox}
 \end{figure}
 
-Pri povezivanju svih elemenata potrebno je da \textit{PWR} prekidač, odnosno\textit{Key switch} bude u otvorenom stanju. Nakon što se preuzme softver za konfiguraciju i instalira na PC, prekidač za napajanje je potrebno zatvoriti i pokrenuti instalirani softver. Kada se otvori dijaloški prozor programa (slika \ref{fig:configuration}), potrebno je kliknuti na opciju \textit{Read}.
+Pri povezivanju svih elemenata potrebno je da \textit{PWR} prekidač, odnosno\textit{Key switch} bude u otvorenom stanju. Nakon što se preuzme softver za konfiguraciju i instalira na PC, prekidač za napajanje je potrebno zatvoriti i pokrenuti instalirani softver. Kada se otvori dijaloški prozor programa (slika \ref{fig:configuration}), potrebno je kliknuti na opciju \textit{Read}, kako bi se učitali trenutni podaci kontrolera.
+
+Parametri koje je potrebno konfigurirati prije procesa identifikacije ugla se nalaze unutar grupe \textit{Motor}, a odnose se na broj polova motora, tip senzora brzine i iznos struje koja se koristi za identifikaciju. Unutar grupe \textit{Vehicle} potrebno je podesiti parametre: \textit{TPS Type} (način zadavanja gasa), \textit{Max Output Frequency} (maksimalna vrijednost frekvencije za faze motora), \textit{Max Speed} (maksimalna brzina motora, izražena u obrtajima po minuti) i \textit{PWM frequency} (frekvencija širinsko-impulsne modulacije, odnosno metode kojom pretvarač upravlja motorima). Treba napomenuti da brzina rotacije motora, prema specifikaciji proizvođača datoj u prilogu \ref{motor_datasheet}, brzina rotacije motora iznosi od 550 do 1200 RPM.
 
 Naredni korak u postupku identifikacije ugla je upisivanje broja \textbf{170} u parametar \textit{Identification Angle} i odabir opcije \textit{Write}. Zatim je potrebno izaći iz programa za konfiguraciju. Isključivanjem dovoda napajanja na nekoliko sekundi i ponovnim spuštanjem \textit{PWR} prekidača, motor započinje kretanje nasumično u oba smjera. Proces identifikacije traje od 2 do 3 minute.
 
