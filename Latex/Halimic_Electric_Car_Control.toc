@@ -1,4 +1,4 @@
-\babel@toc {croatian}{}
+\babel@toc {croatian}{}\relax 
 \thispagestyle {empty}
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motor}{1}{section.1.1}%
@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {1.4}Upravljanje motorom}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Konfiguracija parametara pretvarača}{7}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Operacija identifikacije ugla}{7}{section.1.6}%
-\contentsline {chapter}{Prilozi}{10}{section*.8}%
-\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{11}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Kelly KLS-H Brushless Motor Controller User's Manual}{15}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}JKH Foot Throttle}{24}{appendix.1.C}%
-\contentsline {chapter}{\numberline {D}Control Box}{28}{appendix.1.D}%
+\contentsline {section}{\numberline {1.7}Model vozila}{9}{section.1.7}%
+\contentsline {chapter}{Prilozi}{11}{section*.9}%
+\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{12}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Control Box}{16}{appendix.1.B}%
+\contentsline {chapter}{Literatura}{18}{appendix.1.B}%

@@ -1,6 +1,6 @@
 \chapter{Uvod}
 
-\qquad U ovom radu je predstavljeno upravljanje električnim vozilom (slika \ref{fig:buggy}) sa pogonom na sva četiri točka. Proizvođač \href{https://www.qsmotor.com/product/8000w-car-motor/}{motora} je kompanija \textit{QSMOTOR}. Snaga motora je $8000W$, a standardni napon napajanja iznosi $72V$. Svaki od motora je spojen na odgovarajući pretvarač/\href{https://kellycontroller.com/shop/kls-h/}{invertor}. Motori su trofazni i sadrže dva seta Hallovih senzora za određivanje brzine i pozicije. Datasheet motora je dat u prilogu \ref{motor_datasheet}, a dio dokumentacije pretvarača \textit{KLS7275H} u prilogu \ref{kelly_datasheet}. Razvoj upravljačkog prototipa će biti realiziran pomoću \href{https://www.dspace.com/en/inc/home/products/hw/microlabbox.cfm?fbclid=IwAR08_hHwsXPVRs6ng2DLSU5HA3vDNzpBa9CMpO8DWlSQ1DXPK58BkLmoiRE}{dSpace} sistema.
+\qquad U ovom radu je predstavljeno upravljanje električnim vozilom (slika \ref{fig:buggy}) sa pogonom na sva četiri točka. Proizvođač \href{https://www.qsmotor.com/product/8000w-car-motor/}{motora} je kompanija \textit{QSMOTOR}. Snaga motora je $8000W$, a standardni napon napajanja iznosi $72V$. Svaki od motora je spojen na odgovarajući pretvarač/\href{https://kellycontroller.com/shop/kls-h/}{invertor}. Motori su trofazni i sadrže dva seta Hallovih senzora za određivanje brzine i pozicije. Datasheet motora je dat u prilogu \ref{motor_datasheet}, a dokumentacija pretvarača \textit{KLS7275H} u \cite{kls7275h}. Razvoj upravljačkog prototipa će biti realiziran pomoću \href{https://www.dspace.com/en/inc/home/products/hw/microlabbox.cfm?fbclid=IwAR08_hHwsXPVRs6ng2DLSU5HA3vDNzpBa9CMpO8DWlSQ1DXPK58BkLmoiRE}{dSpace} sistema.
 
 \begin{figure}
 \begin{center}
@@ -16,7 +16,7 @@
 
 \section{Papučica gasa}
 
-\qquad Brzinu motora je moguće zadavati pomoću papučice gasa. Model koji je odabran ima serijski broj \textit{JKH-005-A-65}. Prema specifikaciji proizvođača \textit{SAYOO}, datoj u prilogu \ref{gas}, dužina kabla spojenog na kočnicu iznosi $65cm$. U kablu se nalazi 5 žica raspoređenih na dva konektora - jedan sa tri, drugi sa četiri žice. Raspon ulaznog i izlaznog napona papučice gasa iznosi od $0$ do $5V$. Ovaj element se konceptualno ponaša kao otpornik sa klizačem koji je spojen na napon napajanja. Izlazni napon otpornika ovisi o položaju klizača, odnosno u ovom slučaju - položaja papučice gasa. Pinovi, prikazani na slici (\ref{fig:gas}), imaju funkcije date u nastavku.
+\qquad Brzinu motora je moguće zadavati pomoću papučice gasa. Model koji je odabran ima serijski broj \textit{JKH-005-A-65}. Prema specifikaciji proizvođača \textit{SAYOO}, datoj u \cite{jkh005a65}, dužina kabla spojenog na kočnicu iznosi $65cm$. U kablu se nalazi 5 žica raspoređenih na dva konektora - jedan sa tri, drugi sa četiri žice. Raspon ulaznog i izlaznog napona papučice gasa iznosi od $0$ do $5V$. Ovaj element se konceptualno ponaša kao otpornik sa klizačem koji je spojen na napon napajanja. Izlazni napon otpornika ovisi o položaju klizača, odnosno u ovom slučaju - položaja papučice gasa. Pinovi, prikazani na slici (\ref{fig:gas}), imaju funkcije date u nastavku.
 
 \begin{itemize}
 	\item (1) - plus napon napajanja ($5V$)
@@ -159,5 +159,57 @@ Naredni korak u postupku identifikacije ugla je upisivanje broja \textbf{170} u 
 Kada se proces završi, pretvarač će dati $3-2$ kod greške - zujalica (\textit{engl. buzzer}) će najprije dati 3, a zatim 2 brza zvučna signala. Zatim je potrebno opet na nekoliko sekundi isključiti napajanje kontrolera. Nakon ponovnog pokretanja korisničkog sučelja za konfiguraciju kontrolera, potrebno je provjeriti \textit{Identification Angle} parametar, ukoliko je proces identifikacije uspješno izvršen - parametar ima vrijednost 85.
 
 Iako se u procesu identifikacije ugla nije koristio potenciometar za davanje gasa, ovaj element služi za provjeru da li se motor kreće u željenom smjeru. Ukoliko to nije slučaj, potrebno je označiti (\textit{engl. check}) opciju \textit{Change Direction} u programu za konfiguraciju. Da bi se promjena sačuvala potrebno je kliknuti na dugme \textit{Write} i resetirati napajanje.
+
+\section{Model vozila}
+
+\qquad Najjednostavniji model vozila predstavlja model sa tri stepena slobode (\textit{engl. degree of freedom}), koji podrazumijeva slobodno kretanje u $xy$ - ravni, te rotaciju oko ose koja prolazi kroz centar mase \cite{zhu2019braking}. Za izvođenje ovog modela, čiji je shematski prikaz dat na slici (\ref{fig:3dof}), potrebno je uzeti u obzir sljedeće pretpostavke:
+
+\begin{itemize}
+	\item vozilo predstavlja kruto tijelo, pri čemu je dinamika guma i suspenzija zanemarena
+	\item vozilo se kreće po potpuno ravnoj površini
+	\item lokacija centra mase je poznata kao i sve vanjske sile koje djeluju na istu
+	\item vozilo posjeduje tipične senzore za upravljanje elektroničkom stabilnošću (\textit{engl. ESC - electronic stability control})
+	\item brzina točkova, ugao pri skretanju, pritisak pri kočenju, ugaona brzina i ubranje su poznate veličine
+	\item izlazni moment svakog motora koji se nalazi u točku se može u svakom trenutku precizno mjeriti
+\end{itemize}
+
+Model kretanja vozila je dat jednačinama (\ref{eq:ax}), (\ref{eq:ay}), (\ref{eq:vx}), (\ref{eq:vy}) i (\ref{eq:gamma}):
+
+\begin{equation}\label{eq:ax}
+a_x = \frac{F_{x,total}}{m}
+\end{equation}
+
+\begin{equation}\label{eq:ay}
+a_y = \frac{F_{y,total}}{m}
+\end{equation}
+
+\begin{equation}\label{eq:vx}
+\dot{v}_x = a_x - \gamma \cdot v_y
+\end{equation}
+
+\begin{equation}\label{eq:vy}
+\dot{v}_y = a_y - \gamma \cdot v_x
+\end{equation}
+
+\begin{equation}\label{eq:gamma}
+\dot{\gamma} = \frac{M_{z,total}}{I_z}
+\end{equation}
+
+pri čemu su:
+
+\begin{itemize}
+	\item $F_{x,total}$ i $F_{y,total}$ - rezultantne vrijednosti sila koje djeluju na vozilo u smjeru $X$ i $Y$ ose,
+	\item $a_x$ i $a_y$ - ubrzanje vozila u smjeru $X$ i $Y$ ose,
+	\item $v_x$ i $v_y$ - longitudinalna i lateralna brzina vozila,
+	\item $\gamma$ i $I_z$ - ugaona brzina i moment inercije vozila,
+	\item $m$ i $M_{z,total}$ - masa i ukupni moment sile vozila.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/3dof.jpg}
+\caption{Model vozila sa tri stepena slobode \cite{zhu2019braking}}
+\label{fig:3dof}
+\end{figure}
 
 

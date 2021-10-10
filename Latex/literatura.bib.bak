@@ -1,0 +1,218 @@
+@article{sunitha2015modeling,
+  title={Modeling and Simulation of LDMOS Device},
+  author={Sunitha, HD and Keshaveni, N},
+  journal={International Journal of Engineering Research},
+  volume={4},
+  number={6},
+  pages={291--295},
+  year={2015},
+  publisher={Innovative Research Publications}
+}
+
+@article{hammes2004high,
+  title={High efficiency, high power WCDMA LDMOS transistors for base stations},
+  author={Hammes, PCA and Jos, HFF and van Rijs, F and Theeuwen, SJCH and Vennema, K},
+  journal={Microwave Journal},
+  volume={47},
+  number={4},
+  pages={94--101},
+  year={2004},
+  publisher={Horizon House Publications, Inc.}
+}
+
+@inproceedings{hou2014high,
+  title={High performance RF LDMOS power transistor for the new generation base station},
+  author={Hou, Fucheng and Zeng, Dajie},
+  booktitle={2014 IEEE International Conference on Electron Devices and Solid-State Circuits},
+  pages={1--2},
+  year={2014},
+  organization={IEEE}
+}
+
+@article{xu2015design,
+  title={Design of a novel W-sinker RF LDMOS},
+  author={Xu, Xiangming and Yu, Han and Huang, Jingfeng and Wang, Chun and Ji, Wei and Zhou, Zhengliang and Cai, Ying and Wang, Yong and Li, Pingliang and Wang, Peng-Fei and others},
+  journal={Advances in Condensed Matter Physics},
+  volume={2015},
+  year={2015},
+  publisher={Hindawi}
+}
+
+@inproceedings{kim2001trenched,
+  title={Trenched sinker LDMOSFET (TS-LDMOS) structure for high power amplifier application above 2 GHz},
+  author={Kim, Cheon Soo and Park, Joung-Woo and Yu, Hyun Kyu},
+  booktitle={International Electron Devices Meeting. Technical Digest (Cat. No. 01CH37224)},
+  pages={40--2},
+  year={2001},
+  organization={IEEE}
+}
+
+@inproceedings{rather2018investigation,
+  title={Investigation of Characteristic Features of Dual Gate-LDMOS through Simulations},
+  author={Rather, GM and Chahar, Suman},
+  booktitle={2018 International Conference on Current Trends towards Converging Technologies (ICCTCT)},
+  pages={1--5},
+  year={2018},
+  organization={IEEE}
+}
+
+@article{bhattacharjee2019spice,
+  title={SPICE Modeling of LDMOSFET Transistor},
+  author={Bhattacharjee, Pritam},
+  journal={Journal of Semiconductor Devices and Circuits},
+  volume={3},
+  number={1},
+  pages={42--57},
+  year={2019}
+}
+
+@inproceedings{keshtkar2017compact,
+  title={A compact model for the current in LDMOS transistors},
+  author={Keshtkar, Hojjat and Javadiun, Erfan and Mansourghanaei, Hassan},
+  booktitle={2017 IEEE International Conference on Electro Information Technology (EIT)},
+  pages={171--176},
+  year={2017},
+  organization={IEEE}
+}
+
+@book{tsividis2011operation,
+  title={Operation and Modeling of the MOS Transistor},
+  author={Tsividis, Yannis and McAndrew, Colin},
+  year={2011},
+  publisher={Oxford Univ. Press}
+}
+
+@article{slotboomvdmos,
+  title={VDMOS and LDMOS transistors for RF power applications},
+  author={Slotboom, JW}
+}
+
+@phdthesis{vestling2002design,
+  title		=	{Design and modeling of high-frequency LDMOS transistors},
+  author	=	{Vestling, Lars},
+  year		=	{2002},
+  school	=	{Acta Universitatis Upsaliensis}
+}
+
+@book{dye2001radio,
+  title={Radio frequency transistors: principles and practical applications},
+  author={Dye, Norman and Granberg, Helge},
+  year={2001},
+  publisher={Elsevier}
+}
+
+@inproceedings{theeuwen2018ldmos,
+  title={Ldmos technology for power amplifiers up to 12 ghz},
+  author={Theeuwen, SJCH and Mollee, H and Heeres, R and Van Rijs, F},
+  booktitle={2018 13th European Microwave Integrated Circuits Conference (EuMIC)},
+  pages={162--165},
+  year={2018},
+  organization={IEEE}
+}
+
+@book{floyd2012electronic,
+  title={Electronic devices: conventional current version},
+  author={Floyd, Thomas L},
+  year={2012},
+  publisher={Prentice Hall}
+}
+
+@book{goldsmith2005wireless,
+  title={Wireless communications},
+  author={Goldsmith, Andrea},
+  year={2005},
+  publisher={Cambridge university press}
+}
+
+@book{kostic1996radiotehnivcki,
+  title={Radiotehnički sklopovi i arhitekture},
+  author={Kostić, Ivo M},
+  year={1996},
+  publisher={Pergamena}
+}
+
+@inproceedings{zeqiri2019comparison,
+  title={Comparison of Algorithms and Technologies 2G, 3G, 4G and 5G},
+  author={Zeqiri, Ramije and Idrizi, Florim and Halimi, Halim},
+  booktitle={2019 3rd International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT)},
+  pages={1--4},
+  year={2019},
+  organization={IEEE}
+}
+
+@book{bowick2011rf,
+  title={RF circuit design},
+  author={Bowick, Christopher},
+  year={2011},
+  publisher={Elsevier}
+}
+
+@inproceedings{liew2014development,
+  title={Development of microstrip chebyshev low pass filters using laser micromachining},
+  author={Liew, HF and Mazalan, M and Johari, S and Safari, NS and Wahab, Y},
+  booktitle={2014 2nd International Conference on Electronic Design (ICED)},
+  pages={473--478},
+  year={2014},
+  organization={IEEE}
+}
+
+@Online{Radiotehnika,
+       title        = {Radiotehnika, Predavanje 6},
+       author       = {Njemčević, Pamela},
+       organization = {Elektrotehnički fakultet},
+       address      = {Sarajevo},
+       year         = {ak. god. 2019./2020.},
+}
+
+@Online{ReleaseNotes,
+       title        = {PSpice Student Version Release 9.1 Release Notes},
+       year         = {2002},
+       url          = {https://www.iee.et.tu-dresden.de/~muellerj/simulation/soft/pspice/pspsvrl.htm}
+}
+
+@book{collins20013g,
+  title={3G wireless networks},
+  author={Collins, Daniel and Smith, Clint and Collins, Daniel},
+  year={2001},
+  publisher={McGraw-Hill Professional Publishing}
+}
+
+@book{schwartz2005mobile,
+  title={Mobile wireless communications},
+  author={Schwartz, Mischa},
+  volume={25},
+  year={2005},
+  publisher={IET}
+}
+
+@book{harte2006introduction,
+  title={Introduction to Mobile Telephone Systems},
+  author={Harte, Lawrence},
+  year={2006},
+  publisher={Althos Publishing}
+}
+
+@book{mishra2018fundamentals,
+  title={Fundamentals of Network Planning and Optimisation 2G/3G/4G: Evolution to 5G},
+  author={Mishra, Ajay R},
+  year={2018},
+  publisher={John Wiley \& Sons}
+}
+
+@book{baliga2005silicon,
+  title={Silicon RF Power MOSFETs},
+  author={Baliga, B Jayant},
+  year={2005},
+  publisher={World Scientific}
+}
+
+@Online{models,
+       title        = {LDMOS Transistors PSpice Models and Datasheets},
+       url          = {http://www.polyfet.com/ldshrfm.htm}
+}
+
+@misc{lp601,
+  title         = "{LP601} RF Power Transistor Datasheet",
+  organization  = "Polyfet RF Devices",
+  address       = "Camarillo, California, USA"
+}
