@@ -3,6 +3,8 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Halimic_Electric_Car_Control.aux
 Reallocating 'name_of_file' (item size: 1) to 14 items.
 A level-1 auxiliary file: vehicle_1.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: prilog_dSpace.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: prilog_motor.aux
 Reallocating 'name_of_file' (item size: 1) to 19 items.
@@ -21,44 +23,44 @@ Database file #1: literatura.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 3 entries,
+You've used 15 entries,
             4012 wiz_defined-function locations,
-            827 strings with 7809 characters,
-and the built_in function-call counts, 1477 in all, are:
-= -- 118
-> -- 25
-< -- 2
-+ -- 12
-- -- 6
-* -- 69
-:= -- 266
-add.period$ -- 3
-call.type$ -- 3
-change.case$ -- 3
-chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 115
-empty$ -- 122
-format.name$ -- 7
-if$ -- 310
+            902 strings with 10137 characters,
+and the built_in function-call counts, 9555 in all, are:
+= -- 775
+> -- 211
+< -- 69
++ -- 115
+- -- 38
+* -- 423
+:= -- 1510
+add.period$ -- 18
+call.type$ -- 15
+change.case$ -- 14
+chr.to.int$ -- 153
+cite$ -- 15
+duplicate$ -- 685
+empty$ -- 784
+format.name$ -- 47
+if$ -- 2192
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 24
-newline$ -- 36
-num.names$ -- 3
-pop$ -- 67
+int.to.str$ -- 15
+missing$ -- 131
+newline$ -- 78
+num.names$ -- 15
+pop$ -- 322
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 119
+skip$ -- 763
 stack$ -- 0
-substring$ -- 12
-swap$ -- 76
-text.length$ -- 2
+substring$ -- 362
+swap$ -- 542
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 3
+type$ -- 15
 warning$ -- 0
-while$ -- 4
-width$ -- 4
-write$ -- 52
+while$ -- 35
+width$ -- 17
+write$ -- 170

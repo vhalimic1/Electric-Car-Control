@@ -53,7 +53,9 @@
 \lstset{basicstyle=\ttfamily,breaklines=true}
 \usepackage{courier}
 % Podesavanje izgleda zaglavlja i podnozja strana
-\usepackage{fancyhdr} 
+\usepackage{fancyhdr}
+
+\usepackage{multicol}
 
 \fancypagestyle{plain}{%
   \fancyhf{}% Clear header/footer
@@ -155,7 +157,7 @@
 \vfill
 
 % Bottom of the page  
-{\large Sarajevo, septembar 2021.}
+{\large Sarajevo, novembar 2021.}
 
 \end{center} 
 \end{titlepage}
@@ -235,6 +237,7 @@
 \begin{appendices}
 %Priloge je najbolje raditi u odvojenim fajlovima
 %Prilog 1
+\include{prilog_dSpace}
 \include{prilog_motor}
 %\include{prilog_kelly}
 %\include{prilog_gas}

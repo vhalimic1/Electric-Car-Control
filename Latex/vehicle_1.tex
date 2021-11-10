@@ -1,13 +1,13 @@
 \chapter{Uvod}
 
-\qquad U ovom radu je predstavljeno upravljanje električnim vozilom (slika \ref{fig:buggy}) sa pogonom na sva četiri točka. Proizvođač \href{https://www.qsmotor.com/product/8000w-car-motor/}{motora} je kompanija \textit{QSMOTOR}. Snaga motora je $8000W$, a standardni napon napajanja iznosi $72V$. Svaki od motora je spojen na odgovarajući pretvarač/\href{https://kellycontroller.com/shop/kls-h/}{invertor}. Motori su trofazni i sadrže dva seta Hallovih senzora za određivanje brzine i pozicije. Datasheet motora je dat u prilogu \ref{motor_datasheet}, a dokumentacija pretvarača \textit{KLS7275H} u \cite{kls7275h}. Razvoj upravljačkog prototipa će biti realiziran pomoću \href{https://www.dspace.com/en/inc/home/products/hw/microlabbox.cfm?fbclid=IwAR08_hHwsXPVRs6ng2DLSU5HA3vDNzpBa9CMpO8DWlSQ1DXPK58BkLmoiRE}{dSpace} sistema.
+\qquad U ovom radu je predstavljeno upravljanje električnim vozilom (slika \ref{car:buggy}) sa pogonom na sva četiri točka. Proizvođač \href{https://www.qsmotor.com/product/8000w-car-motor/}{motora} je kompanija \textit{QSMOTOR}. Snaga motora je $8000W$, a standardni napon napajanja iznosi $72V$. Svaki od motora je spojen na odgovarajući pretvarač/\href{https://kellycontroller.com/shop/kls-h/}{invertor}. Motori su trofazni i sadrže dva seta Hallovih senzora za određivanje brzine i pozicije. Datasheet motora je dat u prilogu \ref{motor_datasheet}, a dokumentacija pretvarača \textit{KLS7275H} u \cite{kls7275h}. Razvoj upravljačkog prototipa će biti realiziran pomoću \href{https://www.dspace.com/en/inc/home/products/hw/microlabbox.cfm?fbclid=IwAR08_hHwsXPVRs6ng2DLSU5HA3vDNzpBa9CMpO8DWlSQ1DXPK58BkLmoiRE}{dSpace} sistema.
 
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.5]{slike/electric_car.jpg}
 \end{center}
 \caption{Električno $4x4$ vozilo}
-\label{fig:buggy}
+\label{car:buggy}
 \end{figure}
 
 \section{Motor}
@@ -162,54 +162,180 @@ Iako se u procesu identifikacije ugla nije koristio potenciometar za davanje gas
 
 \section{Model vozila}
 
-\qquad Najjednostavniji model vozila predstavlja model sa tri stepena slobode (\textit{engl. degree of freedom}), koji podrazumijeva slobodno kretanje u $xy$ - ravni, te rotaciju oko ose koja prolazi kroz centar mase \cite{zhu2019braking}. Za izvođenje ovog modela, čiji je shematski prikaz dat na slici (\ref{fig:3dof}), potrebno je uzeti u obzir sljedeće pretpostavke:
-
-\begin{itemize}
-	\item vozilo predstavlja kruto tijelo, pri čemu je dinamika guma i suspenzija zanemarena
-	\item vozilo se kreće po potpuno ravnoj površini
-	\item lokacija centra mase je poznata kao i sve vanjske sile koje djeluju na istu
-	\item vozilo posjeduje tipične senzore za upravljanje elektroničkom stabilnošću (\textit{engl. ESC - electronic stability control})
-	\item brzina točkova, ugao pri skretanju, pritisak pri kočenju, ugaona brzina i ubranje su poznate veličine
-	\item izlazni moment svakog motora koji se nalazi u točku se može u svakom trenutku precizno mjeriti
-\end{itemize}
-
-Model kretanja vozila je dat jednačinama (\ref{eq:ax}), (\ref{eq:ay}), (\ref{eq:vx}), (\ref{eq:vy}) i (\ref{eq:gamma}):
-
-\begin{equation}\label{eq:ax}
-a_x = \frac{F_{x,total}}{m}
-\end{equation}
-
-\begin{equation}\label{eq:ay}
-a_y = \frac{F_{y,total}}{m}
-\end{equation}
-
-\begin{equation}\label{eq:vx}
-\dot{v}_x = a_x - \gamma \cdot v_y
-\end{equation}
-
-\begin{equation}\label{eq:vy}
-\dot{v}_y = a_y - \gamma \cdot v_x
-\end{equation}
-
-\begin{equation}\label{eq:gamma}
-\dot{\gamma} = \frac{M_{z,total}}{I_z}
-\end{equation}
-
-pri čemu su:
-
-\begin{itemize}
-	\item $F_{x,total}$ i $F_{y,total}$ - rezultantne vrijednosti sila koje djeluju na vozilo u smjeru $X$ i $Y$ ose,
-	\item $a_x$ i $a_y$ - ubrzanje vozila u smjeru $X$ i $Y$ ose,
-	\item $v_x$ i $v_y$ - longitudinalna i lateralna brzina vozila,
-	\item $\gamma$ i $I_z$ - ugaona brzina i moment inercije vozila,
-	\item $m$ i $M_{z,total}$ - masa i ukupni moment sile vozila.
-\end{itemize}
+\qquad Općeniti model vozila uzima u obzir translacijsko kretanje u $xyz$ koordinatnom sistemu i rotacijsko kretanje oko osa tog koordinatnog sistema (\textit{roll}, \textit{pitch} i \textit{yaw}), kao i rotacijsko kretanje kotača. U slučaju vozila sa četiri točka, tada se radi o modelu sa 13 stepeni slobode, uz zanemarivanje dinamike sistema suspenzije. Koordinatni sistem vozila, prema \href{https://www.iso.org/standard/51180.html}{ISO 8855:2011} standardu je prikazan na slici (\ref{model:coordinate-system}).
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{slike/3dof.jpg}
-\caption{Model vozila sa tri stepena slobode \cite{zhu2019braking}}
-\label{fig:3dof}
+\includegraphics[scale=0.5]{slike/model/coordinate-system.png}
+\caption{Koordinatni sistem vozila \citep{kissai2019adaptive}}
+\label{model:coordinate-system}
 \end{figure}
 
+Modeli se mogu razlikovati i po sistemu zakretanja vozila. Različiti sistemi tog tipa su prikazani na slici (\ref{model:steering-systems}). Najćešće korištene konfiguracije podrazumijevaju skretanje bez rotacije kotača, skretanje uz rotaciju prednjih kotača i skretanje uz rotaciju svih kotača. Rotacija se obavlja oko $z$ ose.
 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/model/steering-systems.jpg}
+\caption{Različiti sistemi zakretanja vozila \citep{han2010development}}
+\label{model:steering-systems}
+\end{figure}
+
+Vozilo, prikazano na slici (\ref{car:buggy}), nema mogućnost rotiranja kotača - te se skretanje realizira zadavanjem različitih vrijednosti momenata/brzina motorima na lijevoj i desnoj strani vozila. Neka se razmatra skretanje udesno, kao na slici (\ref{model:skid-steer}). 
+
+Unutrašnji (\textit{engl. inner}) kotači se nalaze bliže, a vanjski (\textit{engl. outer}) dalje od tačke oko koje se vrši rotacija. U ovom slučaju lijevi točkovi su vanjski, sa brzinom $V_o$, dok su desni točkovi unutrašnji, sa brzinom $V_i$. Vozilo će skrenuti udesno, ukoliko vrijedi da je $V_o>V_i$. Analogno se može izvesti zaključak za slučaj skretanja ulijevo.
+
+\begin{figure}
+\centering
+\includegraphics[scale=1]{slike/model/skid-steer.jpg}
+\caption{Skid steering \citep{shuang2007skid}}
+\label{model:skid-steer}
+\end{figure}
+
+Cilj ovakvog upravljanja je promjena orijentacije vozila koje se svjesno podstiče na proklizavanje, pa se ovakav način skretanja vozila u literaturi naziva \textit{skid steering}.
+
+\subsection{Jednačine kretanja}
+
+\qquad Shematski prikaz vozila je prikazan na slici (\ref{model:model}). Ovaj model podrazumijeva kretanje po ravnom terenu, pri čemu se tada zanemaruje translacija po $z$-osi i rotacija oko osa $x$ i $y$.
+
+Model sa 7 stepeni slobode, preuzet iz \citep{aslam2014fuzzy}, sastoji se od jednačina (\ref{eq:model-X}) i (\ref{eq:model-Y}) za kretanje u $xy$-ravni, jednačine (\ref{eq:model-rot}) za rotaciju oko $z$-ose i jednačine (\ref{eq:model-wheel}) za rotaciju kotača.
+
+\begin{equation}\label{eq:model-X}
+M a_x = M ( \dot{v}_x - \gamma v_y ) = \sum_i F_{x,i} = F_{x,fl}+F_{x,fr}+F_{x,rl}+F_{x,rr}
+\end{equation}
+
+\begin{equation}\label{eq:model-Y}
+M a_y = M ( \dot{v}_y - \gamma v_x ) = \sum_i F_{y,i} = F_{y,fl}+F_{y,fr}+F_{y,rl}+F_{y,rr}
+\end{equation}
+
+\begin{equation}\label{eq:model-rot}
+J \dot{\gamma} = l_s (F_{x,fr}+F_{x,rr}-F_{x,fl}-F_{x,rl}) + l_f (F_{y,fl}+F_{y,fr}) - l_r (F_{y,rl}+F_{y,rr})
+\end{equation}
+
+\begin{equation}\label{eq:model-wheel}
+J_w \dot{\omega}_i = \tau_i - R_w F_{x,i}
+\end{equation}
+
+\begin{equation*}
+i = fl, fr, rl, rr
+\end{equation*}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/model/model.jpg}
+\caption{Shematski prikaz vozila \citep{tian2018differential}}
+\label{model:model}
+\end{figure}
+
+Parametri ovog modela su:
+
+\begin{itemize}
+	\item $i$ - oznaka kotača (\textit{fl},\textit{fr},\textit{rl},\textit{rr})
+	\item $fl$ - oznaka za prednji lijevi (\textit{engl. front-left}) točak
+	\item $fr$ - oznaka za prednji desni (\textit{engl. front-right}) točak
+	\item $rl$ - oznaka za zadnji lijevi (\textit{engl. rear-left}) točak
+	\item $rr$ - oznaka za zadnji desni (\textit{engl. rear-right}) točak
+	\item $M$ - masa vozila
+	\item $a_x$ - longitudinalno ubrzanje
+	\item $a_y$ - lateralno ubrzanje
+	\item $v_x$ - longitudinalna brzina
+	\item $v_y$ - lateralna brzina
+	\item $\gamma$ - ugaona brzina centra mase vozila
+	\item $\omega_i$ - ugaona brzina $i$-tog kotača
+	\item $F_x,i$ - longitudinalna sila koja djeluje na $i$-ti točak
+	\item $F_y,i$ - lateralna sila koja djeluje na $i$-ti točak
+	\item $J$ - moment inercije vozila
+	\item $J_w$ - moment inercije točka
+	\item $ls$ - udaljenost između točkova na lijevoj/desnoj strani i tačke centra mase
+	\item $lf$ - udaljenost između tačke centra mase i prednjih kotača
+	\item $lr$ - udaljenost između tačke centra mase i zadnjih kotača
+	\item $\tau_i$ - moment $i$-tog kotača
+	\item $R_w$ - poluprečnik točka
+
+\end{itemize}
+	
+\subsection{Kretanje po jednoj osi}
+
+\qquad Ukoliko se razmatra kretanje samo po jednoj osi, moguće je izvesti nešto jednostavniji model kretanja. Neka se analizira kretanje naprijed-nazad po $x$-osi. Slijedi da nema rotacije oko $z$ ose ($\gamma=0$), kao ni translacije na pravcu $y$-ose ($v_y=0$). Sada jednačine (\ref{eq:model-Y}) i (\ref{eq:model-rot}) nisu više predmet razmatranja, jer nemaju utjecaj na pretpostavljeni tip kretanja.
+
+Za kretanje naprijed-nazad se može uvesti pretpostavka da su sve longitudinalne sile jednake, kao što je navedeno u relaciji (\ref{eq:model-jednake-sile}). S obzirom na to da se u slučaju kretanja po pravcu svim motorima zadaje ista vrijednost momenta, možemo pretpostaviti da su momenti svih motora jednaki, kao što je navedeno u relaciji (\ref{eq:model-jednaki-momenti}). Isti se zaključak može izvesti i za ugaone brzine točkova, što je dato u relaciji (\ref{eq:model-jednake-brzine}).
+
+\begin{equation}\label{eq:model-jednake-sile}
+F_{x,i}=F_{x,j}=F_X
+\end{equation}
+
+\begin{equation}\label{eq:model-jednaki-momenti}
+\tau_i=\tau_j=\tau_w
+\end{equation}
+
+\begin{equation}\label{eq:model-jednake-brzine}
+\omega_i=\omega_j=\omega_w
+\end{equation}
+
+\begin{equation*}
+i,j = fl, fr, rl, rr
+\end{equation*}
+
+Uvrštavanjem relacija (\ref{eq:model-jednake-sile}), (\ref{eq:model-jednaki-momenti}) i (\ref{eq:model-jednake-brzine}) u jednačine (\ref{eq:model-X}) i (\ref{eq:model-wheel}), dobiva se model kretanja vozila po pravcu na ravnom terenu, dat jednačinama (\ref{eq:model-easy-vx}) i (\ref{eq:model-easy-om}).
+
+\begin{equation}\label{eq:model-easy-vx}
+M \dot{v}_x = 4 \cdot F_X
+\end{equation}
+
+\begin{equation}\label{eq:model-easy-om}
+J_w \dot{\omega_w} = \tau_w - R_w F_X
+\end{equation}
+
+\subsection{Model gume}
+
+\qquad Za određivanje lateralnih i longitudinalnih sila, potrebno je poznavati model gume. Postoji nekoliko različitih matematičkih modela koji rješavaju ovaj problem, kao što su npr. \textit{UniTire} ili \textit{Fiala} modeli \citep{ma2017design}.
+
+\subsubsection{Čarobni model gume}
+
+\qquad Najzastupljeniji model u literaturi je poznat pod nazivom \textit{čarobni model gume} (\textit{engl. magic tire model}) \citep{pacejka2005tire} ili \textit{čarobna formula}. Općeniti oblik čarobne formule je dat jednačinama (\ref{eq:guma-Y}), (\ref{eq:guma-x}) i (\ref{eq:guma-y}).
+
+\begin{equation}\label{eq:guma-Y}
+Y(X) = y(x) + S_V
+\end{equation}
+
+\begin{equation}\label{eq:guma-x}
+x = X + S_H
+\end{equation}
+
+\begin{equation}\label{eq:guma-y}
+y = D \cdot \sin \{ C \cdot \arctan \{B \cdot x-E \cdot [B \cdot x- \arctan (B \cdot x)] \} \}
+\end{equation}
+
+Funkcija $Y(X)$ se može koristiti za modeliranje lateralne sile, longitudinalne sile ili ugaonog momenta. Varijabla $X$ može imati karakter omjera uzdužnog proklizavanja (\textit{engl. longitudinal slip ratio}) $\lambda$ ili ugla bočnog klizanja (\textit{engl. side-slip angle}) $\alpha$.
+
+$B$, $C$, $D$ i $E$ su parametri koji se određuju eksperimentalno, a parametri $S_H$ i $S_V$ služe za definiranje \textit{offseta} sila. Interpretacija parametara je data na slici (\ref{model:magic-formula}).
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{slike/model/magic-formula.png}
+\caption{Interpretacija parametara \textit{čarobne formule} \citep{lidfors2020direct}}
+\label{model:magic-formula}
+\end{figure}
+
+\subsection{Određivanje sile $F_X$}
+
+\qquad Neka su offseti sila $S_H=S_V=0$. Tada se longitudinalna sila $F_x(\lambda)$ može odrediti pomoću jednačine (\ref{eq:guma-fx}). Omjer uzdužnog proklizavanja $\lambda$ je definiran sa (\ref{eq:guma-lambda}) \citep{asiabar2019direct}.
+
+\begin{equation}\label{eq:guma-fx}
+F_x(\lambda) = D \cdot \sin \{ C \cdot \arctan \{B \cdot \lambda - E \cdot [B \cdot \lambda - \arctan (B \cdot \lambda )] \} \}
+\end{equation}
+
+\begin{equation}\label{eq:guma-lambda}
+\lambda = 
+\left\{
+\begin{array}{ccc}
+-1 + \frac{R_w \cdot \omega_w}{v_x} & , & R_w \omega_w \leq v_x \\
+1 - \frac{v_x}{R_w \cdot \omega_w} & , & R_w \omega_w \geq v_x
+\end{array}
+\right.
+\end{equation}
+
+Treba napomenuti da u opštem slučaju $\lambda$ ovisi o brzini centra mase točka i geometriji samog vozila, ali da se u slučaju linearnog kretanja brzina centra kotača može aproksimirati longitudinalnom brzinom vozila $v_x$. Vrijednosti koeficijenata $B$, $C$, $D$ i $E$ su preuzeti iz \citep{li2015novel} i imaju vrijednosti date u (\ref{eq:guma-bcde}).
+
+\begin{equation}\label{eq:guma-bcde}
+B = 11,45 \quad C = 1,62 \quad D = 4243 \quad E = 0,48
+\end{equation} 

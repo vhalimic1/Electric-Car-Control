@@ -9,7 +9,26 @@
 \contentsline {section}{\numberline {1.5}Konfiguracija parametara pretvarača}{7}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Operacija identifikacije ugla}{7}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Model vozila}{9}{section.1.7}%
-\contentsline {chapter}{Prilozi}{11}{section*.9}%
-\contentsline {chapter}{\numberline {A}8000W DC Brushless Car Motor Datasheet}{12}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Control Box}{16}{appendix.1.B}%
-\contentsline {chapter}{Literatura}{18}{appendix.1.B}%
+\contentsline {subsection}{\numberline {1.7.1}Jednačine kretanja}{11}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Kretanje po jednoj osi}{12}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Model gume}{13}{subsection.1.7.3}%
+\contentsline {subsubsection}{Čarobni model gume}{13}{section*.12}%
+\contentsline {subsection}{\numberline {1.7.4}Određivanje sile $F_X$}{13}{subsection.1.7.4}%
+\contentsline {chapter}{Prilozi}{15}{section*.14}%
+\contentsline {chapter}{\numberline {A}Instalacija dSPACE programa}{16}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Tekstualni i video vodič za instalaciju}{16}{section.1.A.1}%
+\contentsline {section}{\numberline {A.2}Datoteke za instalaciju softvera}{16}{section.1.A.2}%
+\contentsline {section}{\numberline {A.3}Kompatibilne Matlab/Simulink distribucije}{16}{section.1.A.3}%
+\contentsline {section}{\numberline {A.4}Dodatne postavke}{17}{section.1.A.4}%
+\contentsline {section}{\numberline {A.5}Proces instalacije dSPACE softvera}{17}{section.1.A.5}%
+\contentsline {subsection}{\numberline {A.5.1}Pokretanje instalacije}{17}{subsection.1.A.5.1}%
+\contentsline {subsection}{\numberline {A.5.2}Instalacija, modifikacija, brisanje i popravljanje dSPACE softvera}{17}{subsection.1.A.5.2}%
+\contentsline {subsection}{\numberline {A.5.3}Instalacija dijelova programa}{17}{subsection.1.A.5.3}%
+\contentsline {subsection}{\numberline {A.5.4}Summary page}{18}{subsection.1.A.5.4}%
+\contentsline {subsection}{\numberline {A.5.5}Završetak instalacije}{18}{subsection.1.A.5.5}%
+\contentsline {subsection}{\numberline {A.5.6}Preuzimanje i instaliranje zakrpa}{18}{subsection.1.A.5.6}%
+\contentsline {section}{\numberline {A.6}Integracija dSPACE softvera sa Matlab/Simulink razvojnim okruženjem}{19}{section.1.A.6}%
+\contentsline {section}{\numberline {A.7}Licenciranje i dekripcija dSPACE softvera}{20}{section.1.A.7}%
+\contentsline {chapter}{\numberline {B}8000W DC Brushless Car Motor Datasheet}{22}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Control Box}{26}{appendix.1.C}%
+\contentsline {chapter}{Literatura}{28}{appendix.1.C}%

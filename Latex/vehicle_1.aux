@@ -9,7 +9,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Papučica gasa}{1}{section.1.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Električno $4x4$ vozilo\relax }}{2}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:buggy}{{1.1}{2}{Električno $4x4$ vozilo\relax }{figure.caption.2}{}}
+\newlabel{car:buggy}{{1.1}{2}{Električno $4x4$ vozilo\relax }{figure.caption.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Pinovi papučice gasa\relax }}{2}{figure.caption.3}\protected@file@percent }
 \newlabel{fig:gas}{{1.2}{2}{Pinovi papučice gasa\relax }{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Pretvarač}{3}{section.1.3}\protected@file@percent }
@@ -23,22 +23,57 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.6}Operacija identifikacije ugla}{7}{section.1.6}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Shema spajanja za operaciju identifikacije ugla\relax }}{8}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:angleident}{{1.5}{8}{Shema spajanja za operaciju identifikacije ugla\relax }{figure.caption.6}{}}
-\citation{zhu2019braking}
+\citation{kissai2019adaptive}
+\citation{kissai2019adaptive}
+\citation{han2010development}
+\citation{han2010development}
+\citation{shuang2007skid}
+\citation{shuang2007skid}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Controller Control Box\relax }}{9}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:controlbox}{{1.6}{9}{Controller Control Box\relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.7}Model vozila}{9}{section.1.7}\protected@file@percent }
-\citation{zhu2019braking}
-\citation{zhu2019braking}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Model vozila sa tri stepena slobode \cite  {zhu2019braking}\relax }}{10}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:3dof}{{1.7}{10}{Model vozila sa tri stepena slobode \cite {zhu2019braking}\relax }{figure.caption.8}{}}
-\newlabel{eq:ax}{{1.1}{10}{Model vozila}{equation.1.7.1}{}}
-\newlabel{eq:ay}{{1.2}{10}{Model vozila}{equation.1.7.2}{}}
-\newlabel{eq:vx}{{1.3}{10}{Model vozila}{equation.1.7.3}{}}
-\newlabel{eq:vy}{{1.4}{10}{Model vozila}{equation.1.7.4}{}}
-\newlabel{eq:gamma}{{1.5}{10}{Model vozila}{equation.1.7.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Koordinatni sistem vozila \citep  {kissai2019adaptive}\relax }}{10}{figure.caption.8}\protected@file@percent }
+\newlabel{model:coordinate-system}{{1.7}{10}{Koordinatni sistem vozila \citep {kissai2019adaptive}\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Različiti sistemi zakretanja vozila \citep  {han2010development}\relax }}{10}{figure.caption.9}\protected@file@percent }
+\newlabel{model:steering-systems}{{1.8}{10}{Različiti sistemi zakretanja vozila \citep {han2010development}\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Skid steering \citep  {shuang2007skid}\relax }}{10}{figure.caption.10}\protected@file@percent }
+\newlabel{model:skid-steer}{{1.9}{10}{Skid steering \citep {shuang2007skid}\relax }{figure.caption.10}{}}
+\citation{aslam2014fuzzy}
+\citation{tian2018differential}
+\citation{tian2018differential}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Shematski prikaz vozila \citep  {tian2018differential}\relax }}{11}{figure.caption.11}\protected@file@percent }
+\newlabel{model:model}{{1.10}{11}{Shematski prikaz vozila \citep {tian2018differential}\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7.1}Jednačine kretanja}{11}{subsection.1.7.1}\protected@file@percent }
+\newlabel{eq:model-X}{{1.1}{11}{Jednačine kretanja}{equation.1.7.1}{}}
+\newlabel{eq:model-Y}{{1.2}{11}{Jednačine kretanja}{equation.1.7.2}{}}
+\newlabel{eq:model-rot}{{1.3}{11}{Jednačine kretanja}{equation.1.7.3}{}}
+\newlabel{eq:model-wheel}{{1.4}{11}{Jednačine kretanja}{equation.1.7.4}{}}
+\citation{ma2017design}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7.2}Kretanje po jednoj osi}{12}{subsection.1.7.2}\protected@file@percent }
+\newlabel{eq:model-jednake-sile}{{1.5}{12}{Kretanje po jednoj osi}{equation.1.7.5}{}}
+\newlabel{eq:model-jednaki-momenti}{{1.6}{12}{Kretanje po jednoj osi}{equation.1.7.6}{}}
+\newlabel{eq:model-jednake-brzine}{{1.7}{12}{Kretanje po jednoj osi}{equation.1.7.7}{}}
+\newlabel{eq:model-easy-vx}{{1.8}{12}{Kretanje po jednoj osi}{equation.1.7.8}{}}
+\newlabel{eq:model-easy-om}{{1.9}{12}{Kretanje po jednoj osi}{equation.1.7.9}{}}
+\citation{pacejka2005tire}
+\citation{lidfors2020direct}
+\citation{lidfors2020direct}
+\citation{asiabar2019direct}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces Interpretacija parametara \textit  {čarobne formule} \citep  {lidfors2020direct}\relax }}{13}{figure.caption.13}\protected@file@percent }
+\newlabel{model:magic-formula}{{1.11}{13}{Interpretacija parametara \textit {čarobne formule} \citep {lidfors2020direct}\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7.3}Model gume}{13}{subsection.1.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Čarobni model gume}{13}{section*.12}\protected@file@percent }
+\newlabel{eq:guma-Y}{{1.10}{13}{Čarobni model gume}{equation.1.7.10}{}}
+\newlabel{eq:guma-x}{{1.11}{13}{Čarobni model gume}{equation.1.7.11}{}}
+\newlabel{eq:guma-y}{{1.12}{13}{Čarobni model gume}{equation.1.7.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7.4}Određivanje sile $F_X$}{13}{subsection.1.7.4}\protected@file@percent }
+\citation{li2015novel}
+\newlabel{eq:guma-fx}{{1.13}{14}{Određivanje sile $F_X$}{equation.1.7.13}{}}
+\newlabel{eq:guma-lambda}{{1.14}{14}{Određivanje sile $F_X$}{equation.1.7.14}{}}
+\newlabel{eq:guma-bcde}{{1.15}{14}{Određivanje sile $F_X$}{equation.1.7.15}{}}
 \@setckpt{vehicle_1}{
-\setcounter{page}{11}
-\setcounter{equation}{5}
+\setcounter{page}{15}
+\setcounter{equation}{15}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -48,16 +83,16 @@
 \setcounter{part}{0}
 \setcounter{chapter}{1}
 \setcounter{section}{7}
-\setcounter{subsection}{0}
+\setcounter{subsection}{4}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{7}
+\setcounter{figure}{11}
 \setcounter{table}{0}
 \setcounter{r@tfl@t}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{9}
+\setcounter{bookmark@seq@number}{13}
 \setcounter{parentequation}{0}
 \setcounter{AM@survey}{0}
 \setcounter{caption@flags}{0}
@@ -70,6 +105,6 @@
 \setcounter{@ppsaveapp}{0}
 \setcounter{lstnumber}{1}
 \setcounter{NAT@ctr}{0}
-\setcounter{section@level}{1}
+\setcounter{section@level}{2}
 \setcounter{lstlisting}{0}
 }
